@@ -1,3 +1,129 @@
-<h1>Hola mundo</h1>
-<p> Bienvenido a mi primera aplicación de flask, </p>
-<p> durante el desarrollo de la misma nos la pasaremos muy bien. </p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi To-Do App</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        button {
+            padding: 5px 10px;
+            margin: 0 3px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .complete-btn { background-color: #2ecc71; color: white; }
+        .edit-btn { background-color: #f39c12; color: white; }
+        .delete-btn { background-color: #e74c3c; color: white; }
+    </style>
+</head>
+<body>
+    <h1>Bienvenido a mi To-Do App</h1>
+    <div style="text-align: center; margin-top: 30px;">
+        <button style="padding: 10px 20px; background-color: #2ecc71; color: white; border: none; border-radius: 5px;">
+            ➕ Añadir Nueva Tarea
+        </button>
+    </div>
+    <section>
+        <h3>📝 Pendientes</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Acabar Programación Avanzada</td>
+                    <td>Necesito acabar todos los temas</td>
+                    <td>
+                        <button class="complete-btn">✅ Mover a "Proceso"</button>
+                        <button class="edit-btn">✏️ Editar</button>
+                        <button class="delete-btn">🗑️ Eliminar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h3>🔄 En proceso</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Evaluar a estudiantes</td>
+                    <td>Le están echando ganas</td>
+                    <td>
+                        <button class="complete-btn">✅ Mover a "Finalizado"</button>
+                        <button class="edit-btn">✏️ Editar</button>
+                        <button class="delete-btn">🗑️ Eliminar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h3>✔️ Finalizado</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Desayunar</td>
+                    <td>Si tan solo alguien me invitara a desayunar</td>
+                    <td>
+                        <button class="delete-btn">🗑️ Eliminar</
+                        button>
+                        <button class="edit-btn">✏️ Editar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</body>
+</html>
